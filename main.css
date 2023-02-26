@@ -9,3 +9,22 @@
 body{
   overflow: hidden;
 }
+
+
+canvas{
+  background: blue;
+  top: 0;
+  left: 0;
+}
+
+
+img{
+  display: none;
+}
+
+#loading{
+position: absolute;
+top: 50%;
+width: 100%;
+text-align: center;
+}
