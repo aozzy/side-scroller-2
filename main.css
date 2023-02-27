@@ -12,7 +12,7 @@ body{
 
 
 canvas{
-  background: blue;
+  /* background: blue; */
   top: 0;
   left: 0;
 }
