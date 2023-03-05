@@ -3,7 +3,7 @@ export default class Player {
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
     this.state = [];
-    this.currentState = currentState;
+    this.currentState = this.state[0];
     this.image = document.getElementById("dogImage");
     this.width = 200;
     this.height = 181.83;
@@ -11,6 +11,6 @@ export default class Player {
     this.y = 200
   }
   draw(context){
-    context.drawImage(this.image,this.x,this.y)
+    context.drawImage(this.image,this.x,this.y,600,800)
   }
 }
