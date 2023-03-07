@@ -1,4 +1,8 @@
 import Player from "./player.js"
+import Inputhandler from "./input.js"
+
+
+
 window.addEventListener('load',function(){
 const loading = document.getElementById('loading')
 loading.style.display = 'none'
@@ -9,4 +13,5 @@ canvas.height = window.innerHeight
 const player = new Player(canvas.width,canvas.height)
 console.log(player);
 player.draw(ctx)
+const input = new Inputhandler()
 })
