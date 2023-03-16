@@ -17,6 +17,7 @@ export default class Inputhandler{
       switch(e.key){
         case 'ArrowLeft':
           this.lastKey = 'RELEASE left'
+          console.log(this.lastKey);  
           break
       }
     })
