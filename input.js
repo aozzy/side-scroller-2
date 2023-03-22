@@ -18,6 +18,9 @@ export default class Inputhandler{
         case 'ArrowLeft':
           this.lastKey = 'RELEASE left'
           console.log(this.lastKey);  
+        case 'ArrowRight':
+          this.lastKey = 'RELEASE right'
+          
           break
       }
     })

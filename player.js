@@ -19,3 +19,4 @@ export default class Player {
     console.log(this.frameY);
   }
 }
+  
