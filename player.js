@@ -11,9 +11,10 @@ export default class Player {
     this.y = this.gameHeight - this.height
     this.frameX = 0
     this.frameY = 0
+    console.log(this.image);
   }
   draw(context){
-    context.drawImage(this.image,0,0,this.width * 3,this.height * this.frameY,this.width,this.height,this.x,this.y,this.width,this.height)
+    context.drawImage(this.image,this.width * this.frameX,this.height * this.frameY,this.width,this.height,this.x,this.y,this.width,this.height)
     console.log(this.state);
     console.log(this.frameX);
     console.log(this.frameY);
