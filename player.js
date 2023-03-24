@@ -15,9 +15,7 @@ export default class Player {
   }
   draw(context){
     context.drawImage(this.image,this.width * this.frameX,this.height * this.frameY,this.width,this.height,this.x,this.y,this.width,this.height)
-    console.log(this.state);
-    console.log(this.frameX);
-    console.log(this.frameY);
+    
   }
 }
   
