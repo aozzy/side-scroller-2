@@ -1,7 +1,8 @@
 export default class Inputhandler{
   constructor(){
     this.lastKey = ''
-    window.addEventListener('keydown',function(e){
+    window.addEventListener('keydown',(e)=>{
+      console.log(e.key);  
       switch(e.key){
         case 'ArrowLeft':
           this.lastKey = 'PRESS left'
@@ -13,11 +14,11 @@ export default class Inputhandler{
 
       }
     })
-    window.addEventListener('keyup',function(e){
+    window.addEventListener('keyup',(e)=>{
       switch(e.key){
         case 'ArrowLeft':
           this.lastKey = 'RELEASE left'
-          console.log(this.lastKey);  
+         
         case 'ArrowRight':
           this.lastKey = 'RELEASE right'
           

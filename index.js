@@ -1,5 +1,6 @@
 import Player from "./player.js"
 import Inputhandler from "./input.js"
+import { drawStatusText } from "./util.js"
 
 
 
@@ -11,7 +12,15 @@ const ctx = canvas.getContext('2d')
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 const player = new Player(canvas.width,canvas.height)
-console.log(player);
+
 player.draw(ctx)
 const input = new Inputhandler()
+function animate(){
+  ctx.clearRect(0,0)
+  console.log(input.lastKey);
+  drawStatusText(ctx,input)
+  requestAnimationFrame(animate)
+
+}
+animate()
 })
