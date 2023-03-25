@@ -13,7 +13,7 @@ class State {
 }
 
 
-class StandingLeft extends State{
+export class StandingLeft extends State{
   constructor(player){
     super("STANDING LEFT")
     this.player = player
@@ -28,7 +28,7 @@ class StandingLeft extends State{
 
   }
 }
-class StandingRight extends State{
+export class StandingRight extends State{
   constructor(player){
     super("STANDING RIGHT")
     this.player = player
