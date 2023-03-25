@@ -44,3 +44,21 @@ export class StandingRight extends State{
 
   }
 }
+
+
+export class SittingLeft extends State{
+  constructor(player){
+    super("SITTING LEFT")
+    this.player = player
+  }
+  enter(){
+    this.player.frameY = 0
+
+  }
+  handleInput(input){
+    if (input === 'PRESS DOWN'){
+      this.player.setState(states.STANDING_LEFT)
+    }
+
+  }
+}
