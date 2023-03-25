@@ -6,6 +6,7 @@ import { drawStatusText } from "./util.js"
 
 window.addEventListener('load',function(){
 const loading = document.getElementById('loading')
+console.log(loading);
 loading.style.display = 'none'
 const canvas = document.getElementById('canvas1')
 const ctx = canvas.getContext('2d')
