@@ -11,11 +11,15 @@ export default class Player {
     this.y = this.gameHeight - this.height
     this.frameX = 0
     this.frameY = 0
-    console.log(this.image);
+    
   }
   draw(context){
     context.drawImage(this.image,this.width * this.frameX,this.height * this.frameY,this.width,this.height,this.x,this.y,this.width,this.height)
     
+  }
+  setState(state){
+    this.currentState = this.state[state]
+
   }
 }
   
