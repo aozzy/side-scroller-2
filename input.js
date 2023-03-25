@@ -15,6 +15,10 @@ export default class Inputhandler{
             
             this.lastKey = 'PRESS down'
             break
+          case 'ArrowUp':
+            
+            this.lastKey = 'PRESS up'
+            break
 
       }
     })
@@ -30,6 +34,10 @@ export default class Inputhandler{
           break
         case 'ArrowDown':
           this.lastKey = 'RELEASE down'
+          
+          break
+        case 'ArrowUp':
+          this.lastKey = 'RELEASE up'
           
           break
       }
