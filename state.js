@@ -15,7 +15,19 @@ class State {
 
 class StandingLeft extends State{
   constructor(player){
-    super("STANDING_LEFT")
+    super("STANDING LEFT")
+    this.player = player
+  }
+  enter(){
+
+  }
+  handleInput(){
+
+  }
+}
+class StandingRight extends State{
+  constructor(player){
+    super("STANDING RIGHT")
     this.player = player
   }
 }
