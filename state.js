@@ -1,6 +1,9 @@
 export const states = {
   STANDING_LEFT: 0,
   STANDING_RIGHT: 1,
+  SITTING_LEFT:2,
+  SITTING_RIGHT:3,
+  
 
 }
 
@@ -52,12 +55,14 @@ export class SittingLeft extends State{
     this.player = player
   }
   enter(){
-    this.player.frameY = 0
+    this.player.frameY = 9
 
   }
   handleInput(input){
-    if (input === 'PRESS DOWN'){
-      this.player.setState(states.STANDING_LEFT)
+    if (input === 'PRESS right'){
+      this.player.setState(states.SITTING_RIGHT)
+    }else if (input === 'PRESS up'){
+      this.player.setState(states.STANDING_RIGHT)
     }
 
   }
