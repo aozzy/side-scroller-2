@@ -46,6 +46,8 @@ export default class Player {
   update(input) {
     this.currentState.handleInput(input);
     this.x += this.speed
+    if(this.x <= 0) this.x = 0
+    else if (this.x >= this.gameWidth - this.width) this.x = this.gameWidth - this.width
   }
   setState(state) {
     this.currentState = this.state[state];

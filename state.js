@@ -5,6 +5,8 @@ export const states = {
   SITTING_RIGHT:3,
   RUNNING_LEFT:4,
   RUNNING_RIGHT:5,
+  JUMPING_LEFT:8,
+  JUMPING_RIGHT:9,
   
 
 }
@@ -153,6 +155,43 @@ export class RunningRight extends State{
     }else if (input === 'PRESS down'){
       this.player.setState(states.SITTING_RIGHT)
     }
+
+
+  }
+}
+
+
+
+export class JumpingLeft extends State{
+  constructor(player){
+    super("JUMPING LEFT")
+    this.player = player
+  }
+  enter(){
+    this.player.frameY = 3
+   
+
+  }
+  handleInput(input){
+    
+
+
+  }
+}
+
+
+export class JumpingRight extends State{
+  constructor(player){
+    super("JUMPING RIGHT")
+    this.player = player
+  }
+  enter(){
+    this.player.frameY = 2
+   
+
+  }
+  handleInput(input){
+    
 
 
   }
