@@ -102,14 +102,42 @@ export class RunningLeft extends State{
     this.player = player
   }
   enter(){
-    this.player.frameY = 8
+    this.player.frameY = 7
 
   }
   handleInput(input){
-    if (input === 'PRESS left'){
+    if (input === 'PRESS right'){
+      this.player.setState(states.RUNNING_RIGHT)
+    } else if (input === 'RELEASE left'){
+      this.player.setState(states.STANDING_LEFT)
+    }else if (input === 'PRESS down'){
       this.player.setState(states.SITTING_LEFT)
-    } else if (input === 'RELEASE down'){
-      this.player.setState(states.STANDING_RIGHT)
+    }
+
+
+  }
+}
+
+
+
+
+
+export class RunningRight extends State{
+  constructor(player){
+    super("RUNNING LEFT")
+    this.player = player
+  }
+  enter(){
+    this.player.frameY = 7
+
+  }
+  handleInput(input){
+    if (input === 'PRESS right'){
+      this.player.setState(states.RUNNING_RIGHT)
+    } else if (input === 'RELEASE left'){
+      this.player.setState(states.STANDING_LEFT)
+    }else if (input === 'PRESS down'){
+      this.player.setState(states.SITTING_LEFT)
     }
 
 
