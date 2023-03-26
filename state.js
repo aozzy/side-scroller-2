@@ -41,6 +41,9 @@ export class StandingLeft extends State{
   else if (input === "PRESS down"){
       this.player.setState(states.SITTING_LEFT)
     }
+  else if (input === "PRESS up"){
+      this.player.setState(states.JUMPING_LEFT)
+    }
 
   }
 }
@@ -62,6 +65,9 @@ export class StandingRight extends State{
     }
     else if (input === "PRESS down"){
       this.player.setState(states.SITTING_RIGHT)
+    }
+    else if (input === "PRESS up"){
+      this.player.setState(states.JUMPING_RIGHT)
     }
   }
 }
