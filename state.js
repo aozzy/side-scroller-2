@@ -111,6 +111,7 @@ export class RunningLeft extends State{
   }
   enter(){
     this.player.frameY = 7
+    this.player.speed = -this.player.maxSpeed
 
   }
   handleInput(input){
@@ -137,6 +138,7 @@ export class RunningRight extends State{
   }
   enter(){
     this.player.frameY = 6
+    this.player.speed = this.player.maxSpeed
 
   }
   handleInput(input){
